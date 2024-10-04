@@ -33,7 +33,7 @@ jobs:
     - name: Install Python ${{ matrix.ver }} dependencies
       run: |
         python3 -m pip install --upgrade pip setuptools
-        python3 -m pip install tox numpy
+        python3 -m pip install tox numpy mutmut
 
     - name: Execute Python tests
-      run: tox
+      run: mutmut run
