@@ -37,7 +37,7 @@ jobs:
 
     - name: Execute Python tests
       run: | 
-        mutmut run
+        timeout 4h mutmut run --no-progress
         mutmut results
     - name: Upload mutmut cache as artifact
       uses: actions/upload-artifact@v3
